@@ -1,0 +1,12 @@
+body{
+    background: #000000;
+}
+
+section:not(.hero){
+    width: 100%;
+    max-width: 1600px;
+    margin: 45px auto;
+    @media(min-width: 992px){
+    margin-block: 100px;
+    }
+}
