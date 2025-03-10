@@ -1,168 +1,170 @@
-.reviews{
-    padding: 32px;
-    &__header{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 60px;
-        @media(min-width: 992px){
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 120px;
-        }
+@use "./../../styles/mixins.scss" as *;
+
+.reviews {
+  padding: 32px;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 60px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 120px;
     }
-   
-    &__title{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;        
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
-        color: #FFFFFF;
-        @media(min-width: 992px){
-            font-size: 42px;
-            line-height: 54px;
-        }
+  }
+
+  &__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    @include desktop {
+      font-size: 42px;
+      line-height: 54px;
     }
-    &__description{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;        
-        font-size: 24px;
+  }
+  &__description {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    @include desktop {
+      font-size: 38px;
+      line-height: 42px;
+      text-align: start;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 0 16px;
+    margin-top: 32px;
+    justify-content: center;
+  }
+  &__item {
+    cursor: pointer;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    -webkit-box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
+    -moz-box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
+    box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
+    max-width: 320px;
+    border-radius: 16px;
+    background: linear-gradient(
+      157.81deg,
+      rgba(0, 0, 0, 0) -43.27%,
+      rgba(58, 59, 59, 0) -21.24%,
+      rgba(93, 93, 93, 0) 12.19%,
+      rgba(136, 136, 136, 0) 29.82%,
+      rgba(159, 159, 159, 0.396) 71.94%,
+      rgb(114, 113, 113) 98.29%
+    );
+    &:hover {
+      .quotes {
+        background: radial-gradient(
+          64.18% 64.18% at 71.16% 35.69%,
+          rgb(255, 255, 255) 0.89%,
+          rgb(255, 255, 255) 17.23%,
+          rgb(255, 255, 255) 42.04%,
+          rgb(255, 255, 255) 55.12%,
+          rgb(255, 255, 255) 71.54%,
+          rgb(255, 255, 255) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      -webkit-box-shadow: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
+      -moz-box-shadow: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
+      box-shadow: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
+      background: radial-gradient(
+        64.18% 64.18% at 71.16% 35.69%,
+        rgb(153, 255, 204) 0.89%,
+        rgb(102, 238, 170) 17.23%,
+        rgb(51, 221, 136) 42.04%,
+        rgb(0, 207, 117) 55.12%,
+        rgb(0, 180, 102) 71.54%,
+        rgb(0, 153, 87) 100%
+      );
+    }
+    @include desktop {
+      gap: 32px;
+    }
+    .quotes {
+      font-family: "Montserrat";
+      font-size: 76px;
+      background: radial-gradient(
+        64.18% 64.18% at 71.16% 35.69%,
+        rgb(153, 255, 204) 0.89%,
+        rgb(102, 238, 170) 17.23%,
+        rgb(51, 221, 136) 42.04%,
+        rgb(0, 207, 117) 55.12%,
+        rgb(0, 180, 102) 71.54%,
+        rgb(0, 153, 87) 100%
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &-description {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      @include desktop {
+        font-size: 20px;
         line-height: 32px;
-        text-align: center;
-        color: #FFFFFF;
-        @media(min-width: 992px){
-            font-size: 38px;
-            line-height: 42px;
-            text-align: start;
-        }
+      }
     }
-    &__list{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 32px;
-        padding: 0 16px;
-        margin-top: 32px;
-        justify-content: center;
+    &-author {
+      display: flex;
+      gap: 12px;
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+      }
+      &-name {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #ffffff;
+        @include desktop {
+          font-size: 24px;
+          line-height: 26px;
+        }
+      }
+      &-role {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #ffffff;
+        @include desktop {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
     }
-    &__item{
-        cursor: pointer;
-        padding: 32px 16px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 16px;
-        -webkit-box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
-        -moz-box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
-        box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
-        max-width: 320px;
-        border-radius: 16px;
-        background: linear-gradient(
-            157.81deg,
-            rgba(0, 0, 0, 0) -43.27%,
-            rgba(58, 59, 59, 0) -21.24%,
-            rgba(93, 93, 93, 0) 12.19%,
-            rgba(136, 136, 136, 0) 29.82%,
-            rgba(159, 159, 159, 0.396) 71.94%,
-            rgb(114, 113, 113) 98.29%
-            );
-            &:hover{
-                .quotes{
-                    background: radial-gradient(
-                        64.18% 64.18% at 71.16% 35.69%,
-                        rgb(255, 255, 255) 0.89%,
-                        rgb(255, 255, 255) 17.23%,
-                        rgb(255, 255, 255) 42.04%,
-                        rgb(255, 255, 255) 55.12%,
-                        rgb(255, 255, 255) 71.54%,
-                        rgb(255, 255, 255) 100%
-                      );
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                      background-clip: text;
-                      text-fill-color: transparent;
-                }
-                -webkit-box-shadow: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
-                -moz-box-shadow: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
-                box-shadow: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
-                background: radial-gradient(
-                64.18% 64.18% at 71.16% 35.69%,
-                rgb(153, 255, 204) 0.89%,
-                rgb(102, 238, 170) 17.23%,
-                rgb(51, 221, 136) 42.04%,
-                rgb(0, 207, 117) 55.12%,
-                rgb(0, 180, 102) 71.54%,
-                rgb(0, 153, 87) 100%
-              );
-            }
-        @media(min-width: 992px){   
-            gap: 32px;
-        }
-        .quotes{
-            font-family: 'Montserrat';
-            font-size: 76px;
-            background: radial-gradient(
-                64.18% 64.18% at 71.16% 35.69%,
-                rgb(153, 255, 204) 0.89%,
-                rgb(102, 238, 170) 17.23%,
-                rgb(51, 221, 136) 42.04%,
-                rgb(0, 207, 117) 55.12%,
-                rgb(0, 180, 102) 71.54%,
-                rgb(0, 153, 87) 100%
-              );
-          
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-        &-description{
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 400;        
-            font-size: 16px;
-            line-height: 24px;
-            color: #FFFFFF;
-            @media(min-width: 992px){
-                font-size: 20px;
-                line-height: 32px;
-            }
-        }
-        &-author{
-            display: flex;
-            gap:12px;
-            .avatar{
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-            }
-            &-name{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;        
-                font-size: 16px;
-                line-height: 18px;
-                color: #FFFFFF;
-                @media(min-width: 992px){
-                    font-size: 24px;
-                    line-height: 26px;
-                }
-            }
-            &-role{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;        
-                font-size: 12px;
-                line-height: 16px;
-                color: #FFFFFF;
-                @media(min-width: 992px){
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-            }
-        }
-    }
+  }
 }

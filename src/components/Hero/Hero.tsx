@@ -8,10 +8,10 @@ interface HeroProps {
   buttonText: string;
 }
 
-export const Hero: React.FC<HeroProps> = ({ 
-  title = 'Dashboard <span class="accent">All-in-One</span> – Twoje Centrum Zarządzania',
+export const Hero: React.FC<HeroProps> = ({
+  title = 'Dashboard All-in-One – Twoje Centrum Zarządzania',
   description = 'Zarządzaj wszystkim w jednym miejscu! Nasz intuicyjny dashboard łączy kluczowe funkcje, analizy i statystyki, abyś miał pełną kontrolę nad swoim biznesem lub projektem.',
-  buttonText = 'Rozpocznij teraz'
+  buttonText = 'Rozpocznij teraz',
 }) => {
   return (
     <section className="hero">
@@ -19,7 +19,14 @@ export const Hero: React.FC<HeroProps> = ({
         <SplineScene />
       </div>
       <div className="hero__content">
-        <h2 className="hero__title" dangerouslySetInnerHTML={{ __html: title }} />
+        <h2 className="hero__title">
+          {title.split('All-in-One').map((part, index) => (
+            <React.Fragment key={index}>
+              {index > 0 && <span className="accent">All-in-One</span>}
+              {part}
+            </React.Fragment>
+          ))}
+        </h2>
         <p className="hero__description">{description}</p>
         <button className="hero__button">
           <span className="hero__button-text">{buttonText}</span>
@@ -27,6 +34,6 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

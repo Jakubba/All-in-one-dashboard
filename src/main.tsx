@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App';
 
 const Root = () => {
   return (
@@ -13,4 +13,4 @@ const Root = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")!).render(<Root />);
+ReactDOM.createRoot(document.getElementById('root')!).render(<Root />);

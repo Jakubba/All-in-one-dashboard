@@ -1,77 +1,79 @@
-.possibility{
-    padding: 32px;
-   &__wrapper{
+@use "./../../styles/mixins.scss" as *;
+.possibility {
+  padding: 32px;
+
+  &__wrapper {
     display: flex;
     flex-direction: column;
-    @media(min-width: 992px){
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
-   }
-   &__left{
-    @media(min-width: 992px){
-        width: 50%;
+  }
+
+  &__section {
+    // Zamiast &__left i &__right
+    @include desktop {
+      width: 50%;
     }
-   }
-   &__right{
-    @media(min-width: 992px){
-        width: 50%;
-    }
-   }
-   &__title{
-    font-family: 'Montserrat';
+  }
+
+  &__title {
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;        
+    font-weight: 400;
     font-size: 38px;
     line-height: 42px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 32px;
-    @media(min-width: 992px){
-        font-size: 45px;
-        line-height: 49px;
+    @include desktop {
+      font-size: 45px;
+      line-height: 49px;
     }
-   }
-   &__description{
-    font-family: 'Montserrat';
+  }
+
+  &__description {
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;        
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 16px;
-    @media(min-width: 992px){
-        font-size: 20px;
-        line-height: 32px;
+    @include desktop {
+      font-size: 20px;
+      line-height: 32px;
     }
-   }
-   &__button{
+  }
+
+  &__button {
     border: none;
     border-radius: 16px;
     padding: 16px 32px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;        
+    font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 32px;
     background: linear-gradient(
-        157.81deg,
-        rgba(153, 255, 204, 0.378) -43.27%,
-        rgba(102, 238, 170, 0.341) -21.24%,
-        rgba(51, 221, 136, 0.189) 12.19%,
-        rgba(0, 207, 117, 0.194) 29.82%,
-        rgba(0, 180, 102, 0.568) 51.94%,
-        rgb(0, 153, 87) 90.29%
-        );
+      157.81deg,
+      rgba(153, 255, 204, 0.378) -43.27%,
+      rgba(102, 238, 170, 0.341) -21.24%,
+      rgba(51, 221, 136, 0.189) 12.19%,
+      rgba(0, 207, 117, 0.194) 29.82%,
+      rgba(0, 180, 102, 0.568) 51.94%,
+      rgb(0, 153, 87) 90.29%
+    );
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-     -webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     transition: background 0.25s ease-in-out, background-image 0.25s ease-in-out;
-    &:hover{
-        background: linear-gradient(
+    &:hover {
+      background: linear-gradient(
         157.81deg,
         rgb(153, 255, 204) -43.27%,
         rgb(102, 238, 170) -21.24%,
@@ -79,38 +81,40 @@
         rgb(0, 207, 117) 29.82%,
         rgb(0, 180, 102) 51.94%,
         rgb(0, 153, 87) 90.29%
-        );
+      );
     }
-   }
-   &__list{
+  }
+
+  &__list {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     list-style: none;
-   }
-   &__item{
+  }
+
+  &__item {
     cursor: pointer;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
-    font-weight: 400;        
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 16px;
     padding: 16px 32px;
     background: linear-gradient(
-    157.81deg,
-    rgba(0, 0, 0, 0) -43.27%,
-    rgba(58, 59, 59, 0) -21.24%,
-    rgba(93, 93, 93, 0) 12.19%,
-    rgba(136, 136, 136, 0) 29.82%,
-    rgba(159, 159, 159, 0.396) 71.94%,
-    rgb(114, 113, 113) 98.29%
+      157.81deg,
+      rgba(0, 0, 0, 0) -43.27%,
+      rgba(58, 59, 59, 0) -21.24%,
+      rgba(93, 93, 93, 0) 12.19%,
+      rgba(136, 136, 136, 0) 29.82%,
+      rgba(159, 159, 159, 0.396) 71.94%,
+      rgb(114, 113, 113) 98.29%
     );
     transition: background 0.25s ease-in-out, background-image 0.25s ease-in-out;
-    &:hover{
-        background: linear-gradient(
+    &:hover {
+      background: linear-gradient(
         157.81deg,
         rgb(153, 255, 204) -43.27%,
         rgb(102, 238, 170) -21.24%,
@@ -118,61 +122,66 @@
         rgb(0, 207, 117) 29.82%,
         rgb(0, 180, 102) 51.94%,
         rgb(0, 153, 87) 90.29%
-        );
-        .possibility--item-icon{
-            filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(0%) hue-rotate(12deg) brightness(103%) contrast(106%);
-        }
+      );
+      .possibility--item-icon {
+        filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(0%)
+          hue-rotate(12deg) brightness(103%) contrast(106%);
+      }
     }
-    &-content{
-        display: flex;
-        align-items: center;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      @include desktop {
+        gap: 32px;
+      }
+    }
+
+    &-icon {
+      filter: brightness(0) saturate(100%) invert(46%) sepia(58%)
+        saturate(7042%) hue-rotate(138deg) brightness(95%) contrast(101%);
+      width: 24px;
+      height: 24px;
+      @include desktop {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      @include desktop {
         gap: 16px;
-        @media(min-width: 992px){
-            gap: 32px;
-        }
+      }
     }
-    &-icon{
-        filter: brightness(0) saturate(100%) invert(46%) sepia(58%) saturate(7042%) hue-rotate(138deg) brightness(95%) contrast(101%);
-        width: 24px;
-        height: 24px;
-        @media(min-width: 992px){
-            width: 32px;
-            height: 32px;
-        }
+
+    &-title {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      @include desktop {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
-    &-text{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        @media(min-width: 992px){
-            gap: 16px;
-        }
-    }
-    &-title{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;        
+
+    &-description {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      @include desktop {
         font-size: 20px;
-        line-height: 24px;
-        color: #FFFFFF;
-        @media(min-width: 992px){
-            font-size: 24px;
-            line-height: 32px;
-        }
+        line-height: 32px;
+      }
     }
-    &-description{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;        
-        font-size: 16px;
-        line-height: 24px;
-        color: #FFFFFF;
-        @media(min-width: 992px){
-            font-size: 20px;
-            line-height: 32px;
-        }
-    }
-} 
+  }
 }
-
-

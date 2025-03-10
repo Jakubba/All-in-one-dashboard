@@ -3,7 +3,6 @@ import './Gallery.styles.scss';
 import { images } from './Gallery.data';
 
 export const Gallery: React.FC = () => {
-
   return (
     <section className="gallery">
       <div className="gallery__wrapper">

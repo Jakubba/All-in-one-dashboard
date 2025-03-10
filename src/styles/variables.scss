@@ -1,0 +1,21 @@
+$font-primary: "Montserrat";
+
+$bg-black: #000000;
+$bg-white: #ffffff;
+$color-secondary: #ffffff;
+
+$gradient-font: radial-gradient(
+  64.18% 64.18% at 71.16% 35.69%,
+  rgb(153, 255, 204) 0.89%,
+  rgb(102, 238, 170) 17.23%,
+  rgb(51, 221, 136) 42.04%,
+  rgb(0, 207, 117) 55.12%,
+  rgb(0, 180, 102) 71.54%,
+  rgb(0, 153, 87) 100%
+);
+$index-header: 100;
+$index-footer: 100;
+$index-content: 2;
+
+$abstrat-bg-bottom: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%);
+$abstrat-bg-top: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
