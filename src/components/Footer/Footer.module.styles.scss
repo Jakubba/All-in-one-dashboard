@@ -1,12 +1,9 @@
-@use "./../../styles/mixins.scss" as *;
+@use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
 
 .footer {
-  padding: 32px 0;
-  background: linear-gradient(
-    180deg,
-    rgba(25, 129, 84, 0.178) 60%,
-    rgba(0, 0, 0, 0.178) 100%
-  );
+  padding: $p-32 0;
+  background: $gradient-gr-to-bk;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -17,7 +14,7 @@
     max-width: 1600px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: $gap-32;
     @include desktop {
       flex-direction: row;
       align-items: center;
@@ -26,7 +23,7 @@
   }
 
   &-link {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -84,7 +81,7 @@
     &__item {
       display: flex;
       flex-direction: column;
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -94,7 +91,7 @@
 
     &-title {
       width: 100%;
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
       font-size: 24px;
@@ -123,7 +120,7 @@
     }
 
     &__item {
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;

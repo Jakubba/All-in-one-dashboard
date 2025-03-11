@@ -1,4 +1,4 @@
-@use "./../../styles/mixins.scss" as *;
+@use './../../styles/mixins.scss' as *;
 
 .navbar {
   display: flex;
@@ -9,11 +9,7 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: linear-gradient(
-    180deg,
-    #000000 60%,
-    rgba(25, 129, 84, 0.178) 100%
-  );
+  background: linear-gradient(180deg, #000000 60%, rgba(25, 129, 84, 0.178) 100%);
 
   @include desktop {
     padding: 32px 64px;
@@ -55,11 +51,7 @@
       padding: 120px 16px 32px 16px;
       width: 100%;
       height: 100vh;
-      background: linear-gradient(
-        180deg,
-        #000000ef 60%,
-        rgba(25, 129, 84, 0.905) 100%
-      );
+      background: linear-gradient(180deg, #000000ef 60%, rgba(25, 129, 84, 0.905) 100%);
       z-index: 99;
     }
 
@@ -69,7 +61,7 @@
   }
 
   &__link {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

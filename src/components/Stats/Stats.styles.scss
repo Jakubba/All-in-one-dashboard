@@ -1,4 +1,4 @@
-@use "./../../styles/mixins.scss" as *;
+@use './../../styles/mixins.scss' as *;
 
 .stats {
   background-color: #000000;
@@ -21,7 +21,7 @@
   }
 
   &__item {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -34,7 +34,7 @@
       line-height: 42px;
       &::after {
         display: block;
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         right: -32px;

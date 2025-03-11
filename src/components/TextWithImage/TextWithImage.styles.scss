@@ -1,4 +1,4 @@
-@use "./../../styles/mixins.scss" as *;
+@use './../../styles/mixins.scss' as *;
 
 .text-with-image {
   padding: 32px 0;
@@ -40,7 +40,7 @@
   }
 
   &__title {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
@@ -54,7 +54,7 @@
   }
 
   &__description {
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -80,7 +80,7 @@
     border: none;
     border-radius: 16px;
     padding: 16px 32px;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -100,7 +100,9 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    transition: background 0.25s ease-in-out, background-image 0.25s ease-in-out;
+    transition:
+      background 0.25s ease-in-out,
+      background-image 0.25s ease-in-out;
     &:hover {
       background: linear-gradient(
         157.81deg,

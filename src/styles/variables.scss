@@ -1,4 +1,4 @@
-$font-primary: "Montserrat";
+$font-primary: 'Montserrat';
 
 $bg-black: #000000;
 $bg-white: #ffffff;
@@ -19,3 +19,30 @@ $index-content: 2;
 
 $abstrat-bg-bottom: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%);
 $abstrat-bg-top: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+$gradient-gr-to-bk: linear-gradient(
+  180deg,
+  rgba(25, 129, 84, 0.178) 60%,
+  rgba(0, 0, 0, 0.178) 100%
+);
+$p-32: 32px;
+$p-24: 24px;
+$p-20: 20px;
+$p-16: 16px;
+$p-12: 12px;
+$p-8: 8px;
+$p-4: 4px;
+
+$m-24: 24px;
+$m-20: 20px;
+$m-16: 16px;
+$m-12: 12px;
+$m-8: 8px;
+$m-4: 4px;
+
+$gap-32: 32px;
+$gap-24: 24px;
+$gap-20: 20px;
+$gap-16: 16px;
+$gap-12: 12px;
+$gap-8: 8px;
+$gap-4: 4px;
