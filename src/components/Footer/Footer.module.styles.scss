@@ -2,7 +2,7 @@
 @use './../../styles/variables.scss' as *;
 
 .footer {
-  padding: $p-32 0;
+  padding: $p-primary;
   background: $gradient-gr-to-bk;
   width: 100%;
   display: flex;
@@ -11,7 +11,7 @@
 
   &__wrapper {
     width: 100%;
-    max-width: 1600px;
+    max-width: $max-width-wrapper;
     display: flex;
     flex-direction: column;
     gap: $gap-32;
@@ -23,29 +23,14 @@
   }
 
   &-link {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
+    font-family: $font-primary;
+    font-size: $font-size-basic;
+    line-height: 1.25;
+    color: $color-primary;
     text-decoration: none;
     text-decoration: all 0.25s ease-in-out;
-
-    @include desktop {
-      font-size: 20px;
-      line-height: 24px;
-    }
     &:hover {
-      background: radial-gradient(
-        64.18% 64.18% at 71.16% 35.69%,
-        rgb(153, 255, 204) 0.89%,
-        rgb(102, 238, 170) 17.23%,
-        rgb(51, 221, 136) 42.04%,
-        rgb(0, 207, 117) 55.12%,
-        rgb(0, 180, 102) 71.54%,
-        rgb(0, 153, 87) 100%
-      );
+      background: $gradient-green;
       -webkit-background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -55,10 +40,9 @@
   }
 
   &-logo {
-    width: 100px;
+    width: $with-logo;
 
     @include desktop {
-      width: 150px;
       img {
         width: 100%;
       }
@@ -69,10 +53,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 32px;
+    gap: $gap-32;
 
     @include desktop {
-      gap: 64px;
+      gap: $gap-64;
       flex-direction: row;
       justify-content: end;
       width: 80%;
@@ -81,28 +65,21 @@
     &__item {
       display: flex;
       flex-direction: column;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 15px;
-      color: #ffffff;
+      font-family: $font-primary;
+      color: $color-primary;
+      font-size: $font-size-basic;
+      line-height: 1.25;
     }
 
     &-title {
       width: 100%;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 28px;
-      margin-bottom: 10px;
-      color: #ffffff;
-
+      font-family: $font-primary;
+      color: $color-primary;
+      font-size: $font-size-title;
+      line-height: 1.25;
+      margin-bottom: $m-10;
       @include desktop {
-        font-size: 28px;
-        line-height: 32px;
-        margin-bottom: 14px;
+        margin-bottom: $m-14;
       }
     }
   }
@@ -115,17 +92,17 @@
       flex-wrap: wrap;
       flex-direction: row;
       max-height: 60px;
-      gap: 16px;
+      gap: $gap-16;
       width: 100%;
     }
 
     &__item {
-      font-family: 'Montserrat';
+      font-family: $font-primary;
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
-      line-height: 15px;
-      color: #ffffff;
+      font-size: $font-size-basic;
+      line-height: 1;
+      color: $color-primary;
     }
   }
 }

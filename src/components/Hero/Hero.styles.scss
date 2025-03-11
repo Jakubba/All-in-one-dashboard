@@ -1,4 +1,5 @@
 @use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
 
 .hero {
   position: relative;
@@ -14,21 +15,21 @@
     display: block;
     content: '';
     position: absolute;
-    z-index: 2;
+    z-index: $index-pseudo;
   }
 
   &::before {
     bottom: 0;
     left: 0;
     height: 20%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%);
+    background: $abstract-bg-bottom;
   }
 
   &::after {
     top: 0;
     left: 0;
     height: 10%;
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    background: $abstract-bg-top;
   }
 
   @include desktop {
@@ -56,95 +57,58 @@
   }
 
   &__title {
-    font-family: 'Reddit Sans';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 32px;
-    line-height: 40px;
+    font-family: $font-secondary;
+    font-weight: $font-weight-bigTitle;
+    font-size: $font-size-main;
+    line-height: 1.5;
     text-align: center;
-    color: #ffffff;
-    @include desktop {
-      font-size: 72px;
-      line-height: 80px;
-    }
+    color: $color-primary;
   }
 
   .accent {
-    font-size: 46px;
-    line-height: 42px;
-    background: radial-gradient(
-      64.18% 64.18% at 71.16% 35.69%,
-      rgb(153, 255, 204) 0.89%,
-      rgb(102, 238, 170) 17.23%,
-      rgb(51, 221, 136) 42.04%,
-      rgb(0, 207, 117) 55.12%,
-      rgb(0, 180, 102) 71.54%,
-      rgb(0, 153, 87) 100%
-    );
+    font-size: $font-size-accent;
+    line-height: 1.5;
+    background: $gradient-green;
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    @include desktop {
-      font-size: 84px;
-      line-height: 90px;
-    }
   }
 
   &__description {
-    font-family: 'Montserrat';
+    font-family: $font-primary;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: $font-size-basic;
+    line-height: 1.5;
     text-align: center;
-    color: #ffffff;
-    margin-top: 16px;
+    color: $color-primary;
+    margin-top: $m-16;
     @include desktop {
-      font-size: 20px;
-      line-height: 32px;
-      margin-top: 24px;
+      margin-top: $m-24;
     }
   }
 
   &__button {
     border: none;
-    border-radius: 16px;
-    padding: 16px 32px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    border-radius: $border-radius-primary;
+    padding: $p-button;
+    font-family: $font-primary;
+    font-size: $font-size-button;
+    line-height: 1.25;
     text-align: center;
-    color: #ffffff;
-    margin-top: 32px;
-    background: linear-gradient(
-      157.81deg,
-      rgba(0, 0, 0, 0) -43.27%,
-      rgba(58, 59, 59, 0) -21.24%,
-      rgba(93, 93, 93, 0.157) 12.19%,
-      rgba(136, 136, 136, 0.237) 29.82%,
-      rgba(159, 159, 159, 0.396) 71.94%,
-      rgb(114, 113, 113) 98.29%
-    );
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    color: $color-primary;
+    margin-top: $m-32;
+    background: $gradient-black;
+    box-shadow: $box-shadow-primary;
+    backdrop-filter: $blur-primary;
+    -webkit-backdrop-filter: $blur-primary;
     transition:
       background 0.25s ease-in-out,
       background-image 0.25s ease-in-out;
     &:hover {
-      background: linear-gradient(
-        157.81deg,
-        rgb(153, 255, 204) -43.27%,
-        rgb(102, 238, 170) -21.24%,
-        rgb(51, 221, 136) 12.19%,
-        rgb(0, 207, 117) 29.82%,
-        rgb(0, 180, 102) 51.94%,
-        rgb(0, 153, 87) 90.29%
-      );
+      background: $gradient-green;
     }
 
     @include desktop {
@@ -152,15 +116,7 @@
     }
 
     @include max-to-desktop {
-      background: linear-gradient(
-        157.81deg,
-        rgb(153, 255, 204) -43.27%,
-        rgb(102, 238, 170) -21.24%,
-        rgb(51, 221, 136) 12.19%,
-        rgb(0, 207, 117) 29.82%,
-        rgb(0, 180, 102) 51.94%,
-        rgb(0, 153, 87) 90.29%
-      );
+      background: $gradient-light-green;
     }
   }
 }

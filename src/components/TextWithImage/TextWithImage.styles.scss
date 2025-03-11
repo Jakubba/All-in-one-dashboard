@@ -1,13 +1,14 @@
 @use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
 
 .text-with-image {
-  padding: 32px 0;
+  padding: $p-primary;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: $gap-32;
     @include desktop {
       flex-direction: row;
       justify-content: space-between;
@@ -27,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 32px;
+    border-radius: $border-radius-primary-secondary;
     overflow: hidden;
     @include desktop {
       width: 50%;
@@ -40,13 +41,11 @@
   }
 
   &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
+    font-family: $font-primary;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    color: #ffffff;
+    color: $color-primary;
     @include desktop {
       font-size: 42px;
       line-height: 54px;
@@ -54,17 +53,13 @@
   }
 
   &__description {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-family: $font-primary;
+    font-size: $font-size-basic;
+    line-height: 1.5;
     text-align: center;
-    color: #ffffff;
+    color: $color-primary;
     margin-top: 16px;
     @include desktop {
-      font-size: 20px;
-      line-height: 32px;
       margin-top: 24px;
     }
   }
@@ -78,41 +73,23 @@
 
   &__button {
     border: none;
-    border-radius: 16px;
-    padding: 16px 32px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    border-radius: $border-radius-primary;
+    padding: $p-button;
+    font-family: $font-primary;
+    font-size: $font-size-button;
+    line-height: 1.25;
     text-align: center;
-    color: #ffffff;
-    margin-top: 32px;
-    background: linear-gradient(
-      157.81deg,
-      rgba(153, 255, 204, 0.378) -43.27%,
-      rgba(102, 238, 170, 0.341) -21.24%,
-      rgba(51, 221, 136, 0.189) 12.19%,
-      rgba(0, 207, 117, 0.194) 29.82%,
-      rgba(0, 180, 102, 0.568) 51.94%,
-      rgb(0, 153, 87) 90.29%
-    );
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    color: $color-primary;
+    margin-top: $m-32;
+    background: $gradient-light-green;
+    box-shadow: $box-shadow-primary;
+    backdrop-filter: $blur-primary;
+    -webkit-backdrop-filter: $blur-primary;
     transition:
       background 0.25s ease-in-out,
       background-image 0.25s ease-in-out;
     &:hover {
-      background: linear-gradient(
-        157.81deg,
-        rgb(153, 255, 204) -43.27%,
-        rgb(102, 238, 170) -21.24%,
-        rgb(51, 221, 136) 12.19%,
-        rgb(0, 207, 117) 29.82%,
-        rgb(0, 180, 102) 51.94%,
-        rgb(0, 153, 87) 90.29%
-      );
+      background: $gradient-light-green;
     }
   }
 }

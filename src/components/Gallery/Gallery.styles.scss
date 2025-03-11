@@ -1,7 +1,8 @@
 @use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
 
 .gallery {
-  padding: 64px 0;
+  padding: $p-64 0;
 
   &__wrapper {
     margin: 0 auto;
@@ -10,21 +11,19 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: $gap-16;
     @include desktop {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
+      gap: $gap-32;
     }
   }
 
   &__item {
     width: 100%;
-    border-radius: 32px;
+    border-radius: $border-radius-primary-secondary;
     overflow: hidden;
-    -webkit-box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
-    -moz-box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
-    box-shadow: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
+    box-shadow: $box-shadow-secondary;
     @include desktop {
       &:nth-child(1) {
         grid-column: 1 / 2;

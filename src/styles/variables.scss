@@ -1,10 +1,29 @@
-$font-primary: 'Montserrat';
+@use './mixins.scss' as *;
 
+$width-icon: 24px;
+$height-icon: 24px;
+
+$width-avatar: 48px;
+$height-avatar: 48px;
+
+$with-logo: 100px;
+$max-width-wrapper: 1600px;
+$max-width-input: 320px;
+$max-width-button: 320px;
+
+$font-primary: 'Montserrat';
+$font-secondary: 'Reddit Sans';
+
+$color-accent: rgba(25, 129, 84, 0.905);
 $bg-black: #000000;
 $bg-white: #ffffff;
-$color-secondary: #ffffff;
+$color-primary: #ffffff;
 
-$gradient-font: radial-gradient(
+$box-shadow-primary: 0 4px 30px rgba(0, 0, 0, 0.1);
+$box-shadow-secondary: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
+$box-shadow-tertiary: 14px 6px 64px -10px rgba(153, 255, 204, 0.51);
+
+$gradient-green: radial-gradient(
   64.18% 64.18% at 71.16% 35.69%,
   rgb(153, 255, 204) 0.89%,
   rgb(102, 238, 170) 17.23%,
@@ -13,36 +32,107 @@ $gradient-font: radial-gradient(
   rgb(0, 180, 102) 71.54%,
   rgb(0, 153, 87) 100%
 );
-$index-header: 100;
-$index-footer: 100;
-$index-content: 2;
-
-$abstrat-bg-bottom: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%);
-$abstrat-bg-top: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+$gradient-light-green: linear-gradient(
+  157.81deg,
+  rgb(153, 255, 204) -43.27%,
+  rgb(102, 238, 170) -21.24%,
+  rgb(51, 221, 136) 12.19%,
+  rgb(0, 207, 117) 29.82%,
+  rgb(0, 180, 102) 51.94%,
+  rgb(0, 153, 87) 90.29%
+);
+$gradient-black: linear-gradient(
+  157.81deg,
+  rgba(0, 0, 0, 0) -43.27%,
+  rgba(58, 59, 59, 0) -21.24%,
+  rgba(93, 93, 93, 0.157) 12.19%,
+  rgba(136, 136, 136, 0.237) 29.82%,
+  rgba(159, 159, 159, 0.396) 71.94%,
+  rgb(114, 113, 113) 98.29%
+);
+$gradient-white: radial-gradient(
+  64.18% 64.18% at 71.16% 35.69%,
+  rgb(255, 255, 255) 0.89%,
+  rgb(255, 255, 255) 17.23%,
+  rgb(255, 255, 255) 42.04%,
+  rgb(255, 255, 255) 55.12%,
+  rgb(255, 255, 255) 71.54%,
+  rgb(255, 255, 255) 100%
+);
 $gradient-gr-to-bk: linear-gradient(
   180deg,
   rgba(25, 129, 84, 0.178) 60%,
   rgba(0, 0, 0, 0.178) 100%
 );
+$gradient-bk-to-gr: linear-gradient(180deg, #000000ef 60%, rgba(25, 129, 84, 0.905) 100%);
+$abstract-bg-bottom: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%);
+$abstract-bg-top: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+
+$index-hamburger: 100;
+$index-navbar: 99;
+$index-pseudo: 2;
+
+$p-small: 0 16px;
+$p-primary: 32px 0;
+$p-secondary: 120px 16px 32px 16px;
+$p-tertiary: 64px 0;
+$p-third: 32px 16px;
+$p-input: 16px 32px;
+$p-button: 16px 32px;
+$p-item: 16px 32px;
+
+$p-64: 64px;
 $p-32: 32px;
-$p-24: 24px;
-$p-20: 20px;
 $p-16: 16px;
-$p-12: 12px;
-$p-8: 8px;
-$p-4: 4px;
 
+$m-32: 32px;
 $m-24: 24px;
-$m-20: 20px;
 $m-16: 16px;
-$m-12: 12px;
-$m-8: 8px;
-$m-4: 4px;
+$m-14: 14px;
+$m-10: 10px;
 
+$gap-64: 64px;
 $gap-32: 32px;
-$gap-24: 24px;
-$gap-20: 20px;
 $gap-16: 16px;
 $gap-12: 12px;
 $gap-8: 8px;
-$gap-4: 4px;
+
+$font-size-main: 32px;
+$font-size-small: 12px;
+$font-size-basic: 16px;
+$font-size-title: 24px;
+$font-size-subtitle: 20px;
+$font-size-bigTitle: 36px;
+$font-size-button: 20px;
+$font-size-accent: 46px;
+$font-weight-bigTitle: 900;
+$border-primary: 1px solid #ffffff;
+$border-secondary: 2px solid rgba(153, 255, 204, 0.717);
+
+$border-radius-primary: 16px;
+$border-radius-primary-secondary: 32px;
+
+$blur-primary: blur(5px);
+
+$background-newsletter: url('./../../assets/image/newsletter-background.png') no-repeat center
+  center / cover;
+
+$filter-icon-primary: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(0%)
+  hue-rotate(12deg);
+$filter-icon-secondary: brightness(0) saturate(100%) invert(46%) sepia(58%) saturate(7042%)
+  hue-rotate(138deg) brightness(95%) contrast(101%);
+
+@include desktop {
+  $width-icon: 32px;
+  $height-icon: 32px;
+
+  $width-logo: 150px;
+
+  $font-size-main: 96px;
+  $font-size-small: 16px;
+  $font-size-basic: 20px;
+  $font-size-title: 28px;
+  $font-size-bigTitle: 42px;
+  $font-size-subtitle: 24px;
+  $font-size-accent: 84px;
+}
