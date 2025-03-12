@@ -1,5 +1,5 @@
-@use './../../styles/mixins.scss' as *;
-@use './../../styles/variables.scss' as *;
+@use "./../../styles/mixins.scss" as *;
+@use "./../../styles/variables.scss" as *;
 
 .footer {
   padding: $p-primary;
@@ -37,6 +37,9 @@
       background-clip: text;
       text-fill-color: transparent;
     }
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
   }
 
   &-logo {
@@ -69,6 +72,9 @@
       color: $color-primary;
       font-size: $font-size-basic;
       line-height: 1.25;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
     }
 
     &-title {
@@ -80,6 +86,7 @@
       margin-bottom: $m-10;
       @include desktop {
         margin-bottom: $m-14;
+        font-size: $font-size-title-desktop;
       }
     }
   }
@@ -103,6 +110,9 @@
       font-size: $font-size-basic;
       line-height: 1;
       color: $color-primary;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
     }
   }
 }

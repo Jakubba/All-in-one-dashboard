@@ -63,6 +63,9 @@
     line-height: 1.5;
     text-align: center;
     color: $color-primary;
+    @include desktop {
+      font-size: $font-size-main-desktop;
+    }
   }
 
   .accent {
@@ -74,6 +77,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    @include desktop {
+      font-size: $font-size-accent-desktop;
+    }
   }
 
   &__description {
@@ -87,6 +93,7 @@
     margin-top: $m-16;
     @include desktop {
       margin-top: $m-24;
+      font-size: $font-size-basic-desktop;
     }
   }
 

@@ -1,5 +1,5 @@
-@import './variables.scss';
-@import './mixins.scss';
-@import './global.scss';
-@import './reset.scss';
-@import './fonts.scss';
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+@use './global.scss' as *;
+@use './reset.scss' as *;
+@use './fonts.scss' as *;

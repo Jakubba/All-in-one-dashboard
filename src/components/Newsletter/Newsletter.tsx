@@ -10,7 +10,7 @@ export const Newsletter = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
         </p>
         <form className="newsletter__form">
-          <input className="newsletter__input" type="email" placeholder="Write your email" />
+          <input className="newsletter__input" type="email" placeholder="Email" />
           <button className="newsletter__button">Subscribe</button>
         </form>
       </div>

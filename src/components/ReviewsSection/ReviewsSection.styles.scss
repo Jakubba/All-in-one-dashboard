@@ -22,6 +22,9 @@
     line-height: 1.25;
     text-align: center;
     color: $color-primary;
+    @include desktop {
+      font-size: $font-size-bigTitle-desktop;
+    }
   }
   &__description {
     font-family: $font-primary;
@@ -82,6 +85,9 @@
       font-size: $font-size-basic;
       line-height: 1.5;
       color: $color-primary;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
     }
     &-author {
       display: flex;
@@ -96,12 +102,18 @@
         font-size: $font-size-basic;
         line-height: 1.25;
         color: $color-primary;
+        @include desktop {
+          font-size: $font-size-basic-desktop;
+        }
       }
       &-role {
         color: $color-primary;
         font-family: $font-primary;
         font-size: $font-size-small;
         line-height: 1.25;
+        @include desktop {
+          font-size: $font-size-small-desktop;
+        }
       }
     }
   }

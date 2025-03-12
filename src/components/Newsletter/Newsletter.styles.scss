@@ -19,6 +19,9 @@
     line-height: 1.5;
     text-align: center;
     margin-bottom: $m-32;
+    @include desktop {
+      font-size: $font-size-bigTitle-desktop;
+    }
   }
 
   &__description {
@@ -28,6 +31,9 @@
     text-align: center;
     color: $color-primary;
     margin-bottom: $m-32;
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
   }
 
   &__form {
@@ -55,6 +61,9 @@
       outline: none;
       border: $border-secondary;
     }
+    @include desktop {
+      font-size: $font-size-title-desktop;
+    }
   }
 
   &__button {
@@ -71,6 +80,9 @@
     &:hover {
       box-shadow: $box-shadow-tertiary;
       background: $gradient-green;
+    }
+    @include desktop {
+      font-size: $font-size-title-desktop;
     }
   }
 }

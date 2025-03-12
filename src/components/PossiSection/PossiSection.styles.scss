@@ -26,6 +26,9 @@
     font-size: $font-size-bigTitle;
     line-height: 1.5;
     margin-top: $m-32;
+    @include desktop {
+      font-size: $font-size-bigTitle-desktop;
+    }
   }
 
   &__description {
@@ -34,6 +37,9 @@
     color: $color-primary;
     line-height: 1.5;
     margin-top: $m-16;
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
   }
 
   &__button {
@@ -50,6 +56,9 @@
     box-shadow: $box-shadow-primary;
     backdrop-filter: $blur-primary;
     -webkit-backdrop-filter: $blur-primary;
+    @include desktop {
+      font-size: $font-size-subtitle-desktop;
+    }
   }
 
   &__list {
@@ -77,6 +86,9 @@
       .possibility--item-icon {
         filter: $filter-icon-primary;
       }
+    }
+    @include desktop {
+      font-size: $font-size-basic-desktop;
     }
 
     &-content {
@@ -118,6 +130,9 @@
       font-size: $font-size-basic;
       line-height: 1.5;
       color: $color-primary;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
     }
   }
 }

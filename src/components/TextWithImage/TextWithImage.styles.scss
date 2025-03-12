@@ -61,6 +61,7 @@
     margin-top: 16px;
     @include desktop {
       margin-top: 24px;
+      font-size: $font-size-basic-desktop;
     }
   }
 

@@ -1,5 +1,8 @@
+@use './mixins.scss' as *;
+
 body {
   background: #000000;
+  height: 100vh;
 }
 
 section:not(.hero) {
