@@ -1,0 +1,88 @@
+@use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
+
+.newsletter {
+  border-radius: $border-radius-primary-secondary;
+  padding: $p-primary;
+  background: $background-newsletter;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $p-third;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    color: $color-primary;
+    font-size: $font-size-bigTitle;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: $m-32;
+    @include desktop {
+      font-size: $font-size-bigTitle-desktop;
+    }
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-size: $font-size-basic;
+    line-height: 1.5;
+    text-align: center;
+    color: $color-primary;
+    margin-bottom: $m-32;
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-16;
+    width: 100%;
+  }
+
+  &__input {
+    border: $border-primary;
+    border-radius: $border-radius-primary;
+    padding: $p-input;
+    color: $color-primary;
+    font-size: $font-size-title;
+    background-color: transparent;
+    width: 100%;
+    max-width: $max-width-input;
+    &::placeholder {
+      color: $color-primary;
+    }
+    &:focus {
+      outline: none;
+      border: $border-secondary;
+    }
+    @include desktop {
+      font-size: $font-size-title-desktop;
+    }
+  }
+
+  &__button {
+    border: $border-primary;
+    background-color: transparent;
+    padding: $p-button;
+    color: $color-primary;
+    font-size: $font-size-title;
+    width: 100%;
+    box-shadow: $box-shadow-secondary;
+    max-width: $max-width-button;
+    border-radius: $border-radius-primary;
+    background: $gradient-black;
+    &:hover {
+      box-shadow: $box-shadow-tertiary;
+      background: $gradient-green;
+    }
+    @include desktop {
+      font-size: $font-size-title-desktop;
+    }
+  }
+}

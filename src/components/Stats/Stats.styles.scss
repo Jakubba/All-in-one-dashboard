@@ -1,0 +1,58 @@
+@use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
+
+.stats {
+  width: 100%;
+  background-color: $bg-black;
+  padding: $p-tertiary;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-64;
+    list-style: none;
+    margin: auto;
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    font-family: $font-primary;
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    color: $color-primary;
+    position: relative;
+    @include desktop {
+      font-size: 36px;
+      line-height: 42px;
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -32px;
+        width: 1px;
+        height: 100%;
+        background-color: $bg-white;
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+
+    &--green {
+      margin-left: 10px;
+      background: $gradient-green;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}

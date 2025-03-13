@@ -1,0 +1,138 @@
+@use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
+
+.possibility {
+  padding: $p-32;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__section {
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: $font-size-bigTitle;
+    line-height: 1.5;
+    margin-top: $m-32;
+    @include desktop {
+      font-size: $font-size-bigTitle-desktop;
+    }
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-size: $font-size-basic;
+    color: $color-primary;
+    line-height: 1.5;
+    margin-top: $m-16;
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
+  }
+
+  &__button {
+    border: none;
+    border-radius: $border-radius-primary;
+    padding: $p-button;
+    font-family: $font-primary;
+    font-size: $font-size-subtitle;
+    line-height: 1.25;
+    text-align: center;
+    color: $color-primary;
+    margin-top: $m-32;
+    background: $gradient-light-green;
+    box-shadow: $box-shadow-primary;
+    backdrop-filter: $blur-primary;
+    -webkit-backdrop-filter: $blur-primary;
+    @include desktop {
+      font-size: $font-size-subtitle-desktop;
+    }
+  }
+
+  &__list {
+    margin-top: $m-32;
+    gap: $gap-16;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &__item {
+    cursor: pointer;
+    border-radius: $border-radius-primary;
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: $font-size-basic;
+    line-height: 1.5;
+    padding: $p-item;
+    background: $gradient-black;
+    transition:
+      background 0.25s ease-in-out,
+      background-image 0.25s ease-in-out;
+    &:hover {
+      background: $gradient-light-green;
+      .possibility--item-icon {
+        filter: $filter-icon-primary;
+      }
+    }
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      gap: $gap-16;
+      @include desktop {
+        gap: $gap-32;
+      }
+    }
+
+    &-icon {
+      filter: $filter-icon-secondary;
+      width: $width-icon;
+      height: $height-icon;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-8;
+      @include desktop {
+        gap: $gap-16;
+      }
+    }
+
+    &-title {
+      font-family: $font-primary;
+      font-size: 20px;
+      line-height: 1.25;
+      color: $color-primary;
+      @include desktop {
+        font-size: 24px;
+      }
+    }
+
+    &-description {
+      font-family: $font-primary;
+      font-size: $font-size-basic;
+      line-height: 1.5;
+      color: $color-primary;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
+    }
+  }
+}

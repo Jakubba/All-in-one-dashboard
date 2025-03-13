@@ -1,0 +1,118 @@
+@use "./../../styles/mixins.scss" as *;
+@use "./../../styles/variables.scss" as *;
+
+.footer {
+  padding: $p-primary;
+  background: $gradient-gr-to-bk;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    width: 100%;
+    max-width: $max-width-wrapper;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-32;
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-link {
+    font-family: $font-primary;
+    font-size: $font-size-basic;
+    line-height: 1.25;
+    color: $color-primary;
+    text-decoration: none;
+    text-decoration: all 0.25s ease-in-out;
+    &:hover {
+      background: $gradient-green;
+      -webkit-background-clip: border-box;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    @include desktop {
+      font-size: $font-size-basic-desktop;
+    }
+  }
+
+  &-logo {
+    width: $with-logo;
+
+    @include desktop {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: $gap-32;
+
+    @include desktop {
+      gap: $gap-64;
+      flex-direction: row;
+      justify-content: end;
+      width: 80%;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      font-family: $font-primary;
+      color: $color-primary;
+      font-size: $font-size-basic;
+      line-height: 1.25;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
+    }
+
+    &-title {
+      width: 100%;
+      font-family: $font-primary;
+      color: $color-primary;
+      font-size: $font-size-title;
+      line-height: 1.25;
+      margin-bottom: $m-10;
+      @include desktop {
+        margin-bottom: $m-14;
+        font-size: $font-size-title-desktop;
+      }
+    }
+  }
+
+  &-sub-list {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-wrap: wrap;
+      flex-direction: row;
+      max-height: 60px;
+      gap: $gap-16;
+      width: 100%;
+    }
+
+    &__item {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: $font-size-basic;
+      line-height: 1;
+      color: $color-primary;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
+
+.reviews {
+  padding: $p-32;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-16;
+    margin-bottom: 60px;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: $font-size-bigTitle;
+    line-height: 1.25;
+    text-align: center;
+    color: $color-primary;
+    @include desktop {
+      font-size: $font-size-bigTitle-desktop;
+    }
+  }
+  &__description {
+    font-family: $font-primary;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $color-primary;
+    @include desktop {
+      font-size: 38px;
+      line-height: 42px;
+      text-align: start;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-32;
+    padding: $p-small;
+    margin-top: $m-32;
+    justify-content: center;
+  }
+  &__item {
+    cursor: pointer;
+    padding: $p-third;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: $gap-16;
+    box-shadow: $box-shadow-secondary;
+    max-width: 320px;
+    border-radius: $border-radius-primary;
+    background: $gradient-black;
+    &:hover {
+      .quotes {
+        background: $gradient-white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      box-shadow: $box-shadow-tertiary;
+      background: $gradient-green;
+    }
+    @include desktop {
+      gap: $gap-32;
+    }
+    .quotes {
+      font-family: $font-primary;
+      font-size: 76px;
+      background: $gradient-green;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &-description {
+      font-family: $font-primary;
+      font-size: $font-size-basic;
+      line-height: 1.5;
+      color: $color-primary;
+      @include desktop {
+        font-size: $font-size-basic-desktop;
+      }
+    }
+    &-author {
+      display: flex;
+      gap: $gap-12;
+      .avatar {
+        width: $width-avatar;
+        height: $height-avatar;
+        border-radius: 50%;
+      }
+      &-name {
+        font-family: $font-primary;
+        font-size: $font-size-basic;
+        line-height: 1.25;
+        color: $color-primary;
+        @include desktop {
+          font-size: $font-size-basic-desktop;
+        }
+      }
+      &-role {
+        color: $color-primary;
+        font-family: $font-primary;
+        font-size: $font-size-small;
+        line-height: 1.25;
+        @include desktop {
+          font-size: $font-size-small-desktop;
+        }
+      }
+    }
+  }
+}
