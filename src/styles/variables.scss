@@ -1,4 +1,4 @@
-@use "./mixins.scss" as *;
+@use './mixins.scss' as *;
 
 $width-icon: 24px;
 $height-icon: 24px;
@@ -11,13 +11,16 @@ $max-width-wrapper: 1600px;
 $max-width-input: 320px;
 $max-width-button: 320px;
 
-$font-primary: "Montserrat";
-$font-secondary: "Reddit Sans";
+$font-primary: 'Montserrat';
+$font-secondary: 'Reddit Sans';
 
+$color-primary: #22875b;
 $color-accent: rgba(25, 129, 84, 0.905);
 $bg-black: #000000;
 $bg-white: #ffffff;
 $color-primary: #ffffff;
+
+$bg-gray:rgba(103, 103, 103, 0.526);
 
 $box-shadow-primary: 0 4px 30px rgba(0, 0, 0, 0.1);
 $box-shadow-secondary: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
@@ -64,11 +67,7 @@ $gradient-gr-to-bk: linear-gradient(
   rgba(25, 129, 84, 0.178) 60%,
   rgba(0, 0, 0, 0.178) 100%
 );
-$gradient-bk-to-gr: linear-gradient(
-  180deg,
-  #000000ef 60%,
-  rgba(25, 129, 84, 0.905) 100%
-);
+$gradient-bk-to-gr: linear-gradient(180deg, #000000ef 60%, rgba(25, 129, 84, 0.905) 100%);
 $abstract-bg-bottom: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80%);
 $abstract-bg-top: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 
@@ -84,7 +83,7 @@ $p-third: 32px 16px;
 $p-input: 16px 32px;
 $p-button: 16px 32px;
 $p-item: 16px 32px;
-
+$p-input-login: 8px 16px 8px 48px;
 $p-64: 64px;
 $p-32: 32px;
 $p-16: 16px;
@@ -118,13 +117,13 @@ $border-radius-primary-secondary: 32px;
 
 $blur-primary: blur(5px);
 
-$background-newsletter: url("./../../assets/image/newsletter-background.png")
-  no-repeat center center / cover;
+$background-newsletter: url('./../../assets/image/newsletter-background.png') no-repeat center
+  center / cover;
 
-$filter-icon-primary: brightness(0) saturate(100%) invert(97%) sepia(97%)
-  saturate(0%) hue-rotate(12deg);
-$filter-icon-secondary: brightness(0) saturate(100%) invert(46%) sepia(58%)
-  saturate(7042%) hue-rotate(138deg) brightness(95%) contrast(101%);
+$filter-icon-primary: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(0%)
+  hue-rotate(12deg);
+$filter-icon-secondary: brightness(0) saturate(100%) invert(46%) sepia(58%) saturate(7042%)
+  hue-rotate(138deg) brightness(95%) contrast(101%);
 
 $width-icon-desktop: 32px;
 $height-icon-desktop: 32px;
