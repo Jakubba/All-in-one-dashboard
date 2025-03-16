@@ -2,22 +2,21 @@
 @use '../../styles/mixins.scss' as *;
 
 .login {
-  &-section {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-  }
-  &-wrapper {
-    border-radius: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: $index-login;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+
+  &__wrapper {
+    border-radius: $border-radius-primary;
     background-color: rgb(31, 31, 31);
     display: flex;
     flex-direction: column;
@@ -26,7 +25,7 @@
     width: 80%;
     overflow: hidden;
     max-width: 900px;
-    @media (min-width: 992px) {
+    @include desktop {
       flex-direction: row;
     }
   }
@@ -39,7 +38,7 @@
     min-height: 350px;
     height: 100%;
     width: 100%;
-    @media (min-width: 992px) {
+    @include desktop {
       width: 50%;
       min-height: 650px;
     }
@@ -56,11 +55,11 @@
       position: relative;
       font-family: $font-primary;
       font-size: $font-size-bigTitle;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       text-align: center;
       box-shadow: $box-shadow-primary;
       color: $color-primary;
-      @media (min-width: 992px) {
+      @include desktop {
         font-size: $font-size-bigTitle-desktop;
       }
     }
@@ -74,7 +73,7 @@
     min-height: 350px;
     height: 100%;
     width: 100%;
-    @media (min-width: 992px) {
+    @include desktop {
       width: 50%;
       min-height: 600px;
     }
@@ -84,24 +83,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: $p-24;
     &__title {
       font-family: $font-primary;
       font-size: $font-size-title;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       color: $color-primary;
       margin-bottom: 12px;
-      @media (min-width: 992px) {
+      @include desktop {
         font-size: $font-size-title-desktop;
       }
     }
     &__description {
       font-family: $font-primary;
       font-size: $font-size-basic;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       color: $color-primary;
       margin-bottom: 32px;
-      @media (min-width: 992px) {
+      @include desktop {
         font-size: $font-size-basic-desktop;
       }
     }
@@ -111,14 +110,13 @@
       padding: $p-button;
       font-family: $font-primary;
       font-size: $font-size-basic;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       text-align: center;
       color: $color-primary;
       margin-top: $m-32;
       background: $gradient-light-green;
       box-shadow: $box-shadow-primary;
       backdrop-filter: $blur-primary;
-      -webkit-backdrop-filter: $blur-primary;
       &:hover {
         background: $gradient-bk-to-gr;
       }
@@ -126,14 +124,14 @@
     &__question {
       font-family: $font-primary;
       font-size: $font-size-basic;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       color: $color-primary;
       margin-bottom: 12px;
     }
     &__link {
       font-family: $font-primary;
       font-size: $font-size-basic;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       color: $color-accent;
       margin-bottom: 12px;
       transition: color 0.25s ease-in-out;
@@ -158,47 +156,13 @@
   &-form-title {
     font-family: $font-primary;
     font-size: $font-size-bigTitle;
-    line-height: 1.25;
+    line-height: $line-height-basic;
     text-align: center;
     color: $color-primary;
     margin-bottom: 32px;
-    @media (min-width: 992px) {
+    @include desktop {
       font-size: $font-size-bigTitle-desktop;
     }
   }
 }
 
-.checkbox-container {
-  color: $color-primary;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-  .checkbox {
-    position: absolute;
-    z-index: 10;
-    height: $height-icon;
-    width: $width-icon;
-    background: url('../../assets/icons/check-empty.png') no-repeat;
-    background-size: contain;
-  }
-  .checkbox-input {
-    opacity: 0;
-    position: relative;
-    cursor: pointer;
-    z-index: 100;
-    height: 24px;
-    width: 24px;
-    margin-right: 16px;
-  }
-  label {
-    font-family: $font-primary;
-    font-size: $font-size-basic;
-    line-height: 1.25;
-    color: $color-primary;
-  }
-  &:has(.checkbox-input:checked) .checkbox {
-    background: url('../../assets/icons/check-icon.png') no-repeat;
-    background-size: contain;
-  }
-}

@@ -60,7 +60,7 @@
     font-family: $font-secondary;
     font-weight: $font-weight-bigTitle;
     font-size: $font-size-main;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     text-align: center;
     color: $color-primary;
     @include desktop {
@@ -70,7 +70,7 @@
 
   .accent {
     font-size: $font-size-accent;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     background: $gradient-green;
     background-clip: border-box;
     -webkit-background-clip: text;
@@ -87,7 +87,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: $font-size-basic;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     text-align: center;
     color: $color-primary;
     margin-top: $m-16;
@@ -103,14 +103,13 @@
     padding: $p-button;
     font-family: $font-primary;
     font-size: $font-size-button;
-    line-height: 1.25;
+    line-height: $line-height-basic;
     text-align: center;
     color: $color-primary;
     margin-top: $m-32;
     background: $gradient-black;
     box-shadow: $box-shadow-primary;
     backdrop-filter: $blur-primary;
-    -webkit-backdrop-filter: $blur-primary;
     transition:
       background 0.25s ease-in-out,
       background-image 0.25s ease-in-out;

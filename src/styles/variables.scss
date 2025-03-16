@@ -20,7 +20,7 @@ $bg-black: #000000;
 $bg-white: #ffffff;
 $color-primary: #ffffff;
 
-$bg-gray:rgba(103, 103, 103, 0.526);
+$bg-gray: rgba(103, 103, 103, 0.526);
 
 $box-shadow-primary: 0 4px 30px rgba(0, 0, 0, 0.1);
 $box-shadow-secondary: 14px 6px 64px -10px rgba(255, 255, 255, 0.31);
@@ -74,6 +74,7 @@ $abstract-bg-top: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 $index-hamburger: 100;
 $index-navbar: 99;
 $index-pseudo: 2;
+$index-login: 99;
 
 $p-small: 0 16px;
 $p-primary: 32px 0;
@@ -85,6 +86,7 @@ $p-button: 16px 32px;
 $p-item: 16px 32px;
 $p-input-login: 8px 16px 8px 48px;
 $p-64: 64px;
+$p-24: 24px;
 $p-32: 32px;
 $p-16: 16px;
 
@@ -109,9 +111,15 @@ $font-size-bigTitle: 36px;
 $font-size-button: 20px;
 $font-size-accent: 46px;
 $font-weight-bigTitle: 900;
-$border-primary: 1.5px solid #ffffff;
-$border-secondary: 1.5px solid rgba(153, 255, 204, 0.717);
 
+$line-height-normal:1;
+$line-height-basic:1.25;
+$line-height-primary:1.5;
+
+$border-primary: 2px solid #ffffff;
+$border-secondary: 2px solid rgba(153, 255, 204, 0.717);
+
+$border-radius-small: 8px;
 $border-radius-primary: 16px;
 $border-radius-primary-secondary: 32px;
 

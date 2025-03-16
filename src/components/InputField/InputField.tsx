@@ -1,5 +1,5 @@
-import React from 'react';
-import './InputField.styles.scss';
+import React from "react";
+import "./InputField.styles.scss";
 
 interface InputFieldProps {
   type: string;
@@ -11,7 +11,7 @@ interface InputFieldProps {
 const InputField: React.FC<InputFieldProps> = ({ type, id, placeholder, icon }) => {
   return (
     <div className="input-container">
-      <img className="input__img" src={icon} alt={`${id} Icon`} />
+      <img className="input-container__img" src={icon} alt={`${id} Icon`} />
       <input type={type} id={id} placeholder={placeholder} required />
     </div>
   );

@@ -4,7 +4,7 @@ import { images } from './Gallery.data';
 
 export const Gallery: React.FC = () => {
   return (
-    <section className="gallery">
+    <section className="section gallery">
       <div className="gallery__wrapper">
         <ul className="gallery__list">
           {images.map((image, index) => (
