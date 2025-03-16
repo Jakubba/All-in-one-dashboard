@@ -19,7 +19,7 @@
   &__title {
     font-family: $font-primary;
     font-size: $font-size-bigTitle;
-    line-height: 1.25;
+    line-height: $line-height-basic;
     text-align: center;
     color: $color-primary;
     @include desktop {
@@ -29,12 +29,12 @@
   &__description {
     font-family: $font-primary;
     font-size: 24px;
-    line-height: 32px;
+    line-height: $line-height-basic;
     text-align: center;
     color: $color-primary;
     @include desktop {
       font-size: 38px;
-      line-height: 42px;
+      line-height: $line-height-basic;
       text-align: start;
     }
   }
@@ -83,7 +83,7 @@
     &-description {
       font-family: $font-primary;
       font-size: $font-size-basic;
-      line-height: 1.5;
+      line-height: $line-height-primary;
       color: $color-primary;
       @include desktop {
         font-size: $font-size-basic-desktop;
@@ -100,7 +100,7 @@
       &-name {
         font-family: $font-primary;
         font-size: $font-size-basic;
-        line-height: 1.25;
+        line-height: $line-height-basic;
         color: $color-primary;
         @include desktop {
           font-size: $font-size-basic-desktop;
@@ -110,7 +110,7 @@
         color: $color-primary;
         font-family: $font-primary;
         font-size: $font-size-small;
-        line-height: 1.25;
+        line-height: $line-height-basic;
         @include desktop {
           font-size: $font-size-small-desktop;
         }

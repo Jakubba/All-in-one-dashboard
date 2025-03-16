@@ -16,7 +16,7 @@
     font-family: $font-primary;
     color: $color-primary;
     font-size: $font-size-bigTitle;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     text-align: center;
     margin-bottom: $m-32;
     @include desktop {
@@ -27,7 +27,7 @@
   &__description {
     font-family: $font-primary;
     font-size: $font-size-basic;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     text-align: center;
     color: $color-primary;
     margin-bottom: $m-32;

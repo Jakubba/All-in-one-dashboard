@@ -24,13 +24,13 @@
   &__item {
     font-family: $font-primary;
     font-size: 26px;
-    line-height: 28px;
+    line-height: $line-height-basic;
     text-align: center;
     color: $color-primary;
     position: relative;
     @include desktop {
       font-size: 36px;
-      line-height: 42px;
+      line-height: $line-height-basic;
       &::after {
         display: block;
         content: '';

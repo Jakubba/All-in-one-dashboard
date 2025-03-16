@@ -24,7 +24,7 @@
     color: $color-primary;
     font-family: $font-primary;
     font-size: $font-size-bigTitle;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     margin-top: $m-32;
     @include desktop {
       font-size: $font-size-bigTitle-desktop;
@@ -35,7 +35,7 @@
     font-family: $font-primary;
     font-size: $font-size-basic;
     color: $color-primary;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     margin-top: $m-16;
     @include desktop {
       font-size: $font-size-basic-desktop;
@@ -48,7 +48,7 @@
     padding: $p-button;
     font-family: $font-primary;
     font-size: $font-size-subtitle;
-    line-height: 1.25;
+    line-height: $line-height-basic;
     text-align: center;
     color: $color-primary;
     margin-top: $m-32;
@@ -75,7 +75,7 @@
     color: $color-primary;
     font-family: $font-primary;
     font-size: $font-size-basic;
-    line-height: 1.5;
+    line-height: $line-height-primary;
     padding: $p-item;
     background: $gradient-black;
     transition:
@@ -118,7 +118,7 @@
     &-title {
       font-family: $font-primary;
       font-size: 20px;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       color: $color-primary;
       @include desktop {
         font-size: 24px;
@@ -128,7 +128,7 @@
     &-description {
       font-family: $font-primary;
       font-size: $font-size-basic;
-      line-height: 1.5;
+      line-height: $line-height-primary;
       color: $color-primary;
       @include desktop {
         font-size: $font-size-basic-desktop;

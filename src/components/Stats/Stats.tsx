@@ -11,7 +11,7 @@ interface StatsProps {
 
 export const Stats: React.FC<StatsProps> = ({ stats }) => {
   return (
-    <section className="stats">
+    <section className="section stats">
       <ul className="stats__list">
         {stats.map((stat, index) => (
           <li className="stats__item" key={index}>

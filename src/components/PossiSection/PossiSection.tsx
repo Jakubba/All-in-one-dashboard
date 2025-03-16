@@ -4,9 +4,8 @@ import { possibilities } from './PossiSection.data';
 
 export const PossiSection: React.FC = () => {
   return (
-    <section className="possibility">
+    <section className="section possibility">
       <div className="possibility__wrapper">
-        {/* Zamiast left i right, używamy wspólnej klasy possibility__section */}
         <div className="possibility__section">
           <h3 className="possibility__title">Abyś możesz dobrane z naszego produktu</h3>
           <p className="possibility__description">

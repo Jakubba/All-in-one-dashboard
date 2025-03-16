@@ -1,5 +1,5 @@
-@use "./../../styles/mixins.scss" as *;
-@use "./../../styles/variables.scss" as *;
+@use './../../styles/mixins.scss' as *;
+@use './../../styles/variables.scss' as *;
 
 .footer {
   padding: $p-primary;
@@ -25,7 +25,7 @@
   &-link {
     font-family: $font-primary;
     font-size: $font-size-basic;
-    line-height: 1.25;
+    line-height: $line-height-basic;
     color: $color-primary;
     text-decoration: none;
     text-decoration: all 0.25s ease-in-out;
@@ -71,7 +71,7 @@
       font-family: $font-primary;
       color: $color-primary;
       font-size: $font-size-basic;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       @include desktop {
         font-size: $font-size-basic-desktop;
       }
@@ -82,7 +82,7 @@
       font-family: $font-primary;
       color: $color-primary;
       font-size: $font-size-title;
-      line-height: 1.25;
+      line-height: $line-height-basic;
       margin-bottom: $m-10;
       @include desktop {
         margin-bottom: $m-14;
@@ -108,7 +108,7 @@
       font-style: normal;
       font-weight: 400;
       font-size: $font-size-basic;
-      line-height: 1;
+      line-height: $line-height-normal;
       color: $color-primary;
       @include desktop {
         font-size: $font-size-basic-desktop;

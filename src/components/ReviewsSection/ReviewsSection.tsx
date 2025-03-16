@@ -4,7 +4,7 @@ import { reviews } from './Reviews.data.ts';
 
 export const ReviewsSection: React.FC = () => {
   return (
-    <section className="reviews">
+    <section className="section reviews">
       <div className="reviews__header">
         <h3 className="reviews__title">What people are saying about us</h3>
         <p className="reviews__description">
