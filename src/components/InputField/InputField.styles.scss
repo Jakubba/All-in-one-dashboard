@@ -1,0 +1,41 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.input {
+  &-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: $m-16;
+    input {
+      padding: $p-input-login;
+      width: 100%;
+      font-family: $font-primary;
+      font-size: $font-size-basic;
+      line-height: $line-height-basic;
+      border-radius: $border-radius-small;
+      background-color: $bg-gray;
+      border: 2px solid $color-accent;
+      &::placeholder {
+        color: $color-primary;
+        font-size: $font-size-basic;
+      }
+      &:focus,
+      &:hover,
+      &:active,
+      &:focus-visible {
+        border: 2px solid $color-accent;
+        outline: 2px solid $color-accent;
+      }
+    }
+    &__img {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      height: 20px;
+      width: auto;
+      filter: brightness(0) saturate(100%) invert(40%) sepia(9%) saturate(4920%) hue-rotate(109deg)
+        brightness(96%) contrast(73%);
+    }
+  }
+}

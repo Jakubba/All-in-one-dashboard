@@ -8,6 +8,7 @@ import { Navbar } from '../components/Navbar/Navbar';
 import { Gallery } from '../components/Gallery/Gallery';
 import { TextWithImage } from '../components/TextWithImage/TextWithImage';
 import { Newsletter } from '../components/Newsletter/Newsletter';
+import { Login } from '../components/Login/Login';
 
 const statsData = [
   { number: 3800, text: 'USER ACTIVE' },
@@ -17,6 +18,7 @@ const statsData = [
 export const HomePage = () => {
   return (
     <div className="home-page">
+      <Login />
       <Navbar />
       <Hero />
       <Stats stats={statsData} />

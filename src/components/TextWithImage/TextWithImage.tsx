@@ -10,7 +10,7 @@ interface TextWithImageProps {
 
 export const TextWithImage: React.FC<TextWithImageProps> = ({ title, description, buttonText }) => {
   return (
-    <section className="text-with-image">
+    <section className="section text-with-image">
       <div className="text-with-image__wrapper">
         <div className="text-with-image__left">
           <h3 className="text-with-image__title">{title}</h3>
