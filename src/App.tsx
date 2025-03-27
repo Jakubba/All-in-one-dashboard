@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './styles/main.scss';
-import { HomePage } from './pages/HomePage';
-import { Opening } from './components/Opening/Opening';
+import React, { useState, useEffect } from "react";
+import "./styles/main.scss";
+import { HomePage } from "./pages/HomePage";
+import { Opening } from "./components/Opening/Opening";
 
 function App() {
   const [loading, setLoading] = useState(true);

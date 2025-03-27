@@ -6,9 +6,18 @@ interface InputFieldProps {
   id: string;
   placeholder: string;
   icon: string;
+  value?: string;
+  onChange: (e: any) => void;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ type, id, placeholder, icon }) => {
+const InputField: React.FC<InputFieldProps> = ({
+  type,
+  id,
+  placeholder,
+  icon,
+  value,
+  onChange,
+}) => {
   return (
     <div className="input-container">
       <img className="input-container__img" src={icon} alt={`${id} Icon`} />

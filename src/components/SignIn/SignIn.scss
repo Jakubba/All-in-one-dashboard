@@ -1,7 +1,7 @@
-@use '../../styles/variables.scss' as *;
-@use '../../styles/mixins.scss' as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
 
-.login {
+.signin {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -14,7 +14,7 @@
   z-index: $index-login;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
-
+  display: none;
   &__wrapper {
     border-radius: $border-radius-primary;
     background-color: rgb(31, 31, 31);
@@ -135,6 +135,8 @@
       color: $color-accent;
       margin-bottom: 12px;
       transition: color 0.25s ease-in-out;
+      background-color: transparent;
+      border: none;
       &:hover {
         color: $color-primary;
       }
@@ -166,3 +168,14 @@
   }
 }
 
+.signin {
+  display: none;
+}
+
+.signin.show {
+  display: flex;
+}
+
+.signin.hide {
+  display: none;
+}
