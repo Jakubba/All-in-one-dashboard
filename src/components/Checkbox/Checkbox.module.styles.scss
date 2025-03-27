@@ -1,17 +1,18 @@
-@use '../../styles/variables.scss' as *;
-@use '../../styles/mixins.scss' as *;
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
 .checkbox-container {
   color: $color-primary;
   width: 100%;
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
   .checkbox {
     position: absolute;
     z-index: 10;
     height: $height-icon;
     width: $width-icon;
-    background: url('../../assets/icons/check-empty.png') no-repeat;
+    background: url("../../assets/icons/check-empty.png") no-repeat;
     background-size: contain;
   }
   .checkbox-input {
@@ -28,9 +29,10 @@
     font-size: $font-size-basic;
     line-height: $line-height-basic;
     color: $color-primary;
+    cursor: pointer;
   }
   &:has(.checkbox-input:checked) .checkbox {
-    background: url('../../assets/icons/check-icon.png') no-repeat;
+    background: url("../../assets/icons/check-icon.png") no-repeat;
     background-size: contain;
   }
 }

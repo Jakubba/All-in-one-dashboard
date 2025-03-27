@@ -1,5 +1,5 @@
-import React from 'react';
-import './Opening.module.styles.scss';
+import React from "react";
+import "./Opening.module.styles.scss";
 export const Opening: React.FC = () => {
   return (
     <div className="loader">
